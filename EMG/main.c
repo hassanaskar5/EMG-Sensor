@@ -8,9 +8,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-u16 r,v;
-u8 *str;
-u8 *s1=" mV\n";
+u16 r;
+u8 *str , *s1=" mV\n";
 
 void EMG_Sample()
 {

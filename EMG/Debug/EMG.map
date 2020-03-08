@@ -17,7 +17,6 @@ Allocating common symbols
 Common symbol       size              file
 
 r                   0x2               ./main.o
-v                   0x2               ./main.o
 str                 0x2               ./main.o
 
 Memory Configuration
@@ -372,7 +371,7 @@ LOAD d:/embedded systems/boon/01- sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4
                 0x00800068                _edata = .
                 0x00800068                PROVIDE (__data_end, .)
 
-.bss            0x00800068        0xa
+.bss            0x00800068        0x8
                 0x00800068                PROVIDE (__bss_start, .)
  *(.bss)
  .bss           0x00800068        0x0 d:/embedded systems/boon/01- sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -392,20 +391,19 @@ LOAD d:/embedded systems/boon/01- sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4
  .bss.y         0x00800068        0x2 ./TIM0_prog.o
  .bss.n         0x0080006a        0x2 ./TIM0_prog.o
  *(COMMON)
- COMMON         0x0080006c        0x6 ./main.o
+ COMMON         0x0080006c        0x4 ./main.o
                 0x0080006c                r
-                0x0080006e                v
-                0x00800070                str
-                0x00800072                PROVIDE (__bss_end, .)
+                0x0080006e                str
+                0x00800070                PROVIDE (__bss_end, .)
                 0x00000c46                __data_load_start = LOADADDR (.data)
                 0x00000c4e                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800072        0x0
-                0x00800072                PROVIDE (__noinit_start, .)
+.noinit         0x00800070        0x0
+                0x00800070                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x00800072                PROVIDE (__noinit_end, .)
-                0x00800072                _end = .
-                0x00800072                PROVIDE (__heap_start, .)
+                0x00800070                PROVIDE (__noinit_end, .)
+                0x00800070                _end = .
+                0x00800070                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -423,7 +421,7 @@ LOAD d:/embedded systems/boon/01- sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x1674
+.stab           0x00000000     0x1668
  *(.stab)
  .stab          0x00000000      0x420 ./ADC_prog.o
  .stab          0x00000420      0x5f4 ./DIO_prog.o
@@ -434,12 +432,12 @@ LOAD d:/embedded systems/boon/01- sdk/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4
                                 0x354 (size before relaxing)
  .stab          0x00000ea0      0x354 ./USART_prog.o
                                 0x408 (size before relaxing)
- .stab          0x000011f4      0x480 ./main.o
-                                0x534 (size before relaxing)
+ .stab          0x000011f4      0x474 ./main.o
+                                0x528 (size before relaxing)
 
-.stabstr        0x00000000      0xea0
+.stabstr        0x00000000      0xe97
  *(.stabstr)
- .stabstr       0x00000000      0xea0 ./ADC_prog.o
+ .stabstr       0x00000000      0xe97 ./ADC_prog.o
 
 .stab.excl
  *(.stab.excl)

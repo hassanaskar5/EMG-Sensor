@@ -7,11 +7,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   1 .data         00000008  00800060  00000c46  00000cda  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .bss          0000000a  00800068  00800068  00000ce2  2**0
+  2 .bss          00000008  00800068  00800068  00000ce2  2**0
                   ALLOC
-  3 .stab         00001674  00000000  00000000  00000ce4  2**2
+  3 .stab         00001668  00000000  00000000  00000ce4  2**2
                   CONTENTS, READONLY, DEBUGGING
-  4 .stabstr      00000ea0  00000000  00000000  00002358  2**0
+  4 .stabstr      00000e97  00000000  00000000  0000234c  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -74,7 +74,7 @@ Disassembly of section .text:
   7e:	1d 92       	st	X+, r1
 
 00000080 <.do_clear_bss_start>:
-  80:	a2 37       	cpi	r26, 0x72	; 114
+  80:	a0 37       	cpi	r26, 0x70	; 112
   82:	b1 07       	cpc	r27, r17
   84:	e1 f7       	brne	.-8      	; 0x7e <.do_clear_bss_loop>
   86:	0e 94 c2 05 	call	0xb84	; 0xb84 <main>
@@ -2032,9 +2032,9 @@ u8 USART_Receive( )
  b38:	08 95       	ret
 
 00000b3a <EMG_Sample>:
-u16 r,v;
-u8 *str;
-u8 *s1=" mV\n";
+
+u16 r;
+u8 *str , *s1=" mV\n";
 
 void EMG_Sample()
 {
@@ -2052,8 +2052,8 @@ void EMG_Sample()
 	USART_TransmitString(itoa(r,str,10));
  b54:	80 91 6c 00 	lds	r24, 0x006C
  b58:	90 91 6d 00 	lds	r25, 0x006D
- b5c:	20 91 70 00 	lds	r18, 0x0070
- b60:	30 91 71 00 	lds	r19, 0x0071
+ b5c:	20 91 6e 00 	lds	r18, 0x006E
+ b60:	30 91 6f 00 	lds	r19, 0x006F
  b64:	b9 01       	movw	r22, r18
  b66:	4a e0       	ldi	r20, 0x0A	; 10
  b68:	50 e0       	ldi	r21, 0x00	; 0
