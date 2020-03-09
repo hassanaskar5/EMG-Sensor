@@ -519,7 +519,7 @@ void DIO_void_Intialization(void){
 	DDRA = DIO_u8_PORTA_Directions;
  294:	ea e3       	ldi	r30, 0x3A	; 58
  296:	f0 e0       	ldi	r31, 0x00	; 0
- 298:	8f ef       	ldi	r24, 0xFF	; 255
+ 298:	8e ef       	ldi	r24, 0xFE	; 254
  29a:	80 83       	st	Z, r24
 	DDRB = DIO_u8_PORTB_Directions;
  29c:	e7 e3       	ldi	r30, 0x37	; 55
