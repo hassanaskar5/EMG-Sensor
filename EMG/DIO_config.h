@@ -19,7 +19,7 @@
 /***************************************************************************/
 /*                    For PORTA                                           */
 /*                    PINS 0 -> 7                                         */
-#define DIO_u8_PIN_DIR_0         DIO_u8_OUTPUT
+#define DIO_u8_PIN_DIR_0         DIO_u8_INPUT
 #define DIO_u8_PIN_DIR_1         DIO_u8_OUTPUT
 #define DIO_u8_PIN_DIR_2         DIO_u8_OUTPUT
 #define DIO_u8_PIN_DIR_3         DIO_u8_OUTPUT
